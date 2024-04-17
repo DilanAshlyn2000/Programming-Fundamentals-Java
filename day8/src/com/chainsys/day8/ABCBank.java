@@ -47,6 +47,7 @@ public class ABCBank {
 	    	   System.out.println("CURRENT BALANCE       :"+total);
 	    	   System.out.println("AMOUNT DEPOSITED!");
 	       }
+	    
 }
 
 	
