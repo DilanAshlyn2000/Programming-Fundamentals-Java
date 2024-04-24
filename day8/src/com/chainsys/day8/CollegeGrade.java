@@ -21,7 +21,7 @@ public class CollegeGrade {
 	public static void percentageCalculation(int classHeld) {
 		int percentage,classAttended;
 		Scanner sc=new Scanner(System.in);
-		 System.out.println("\nEnter the number of classes attended:");
+		 System.out.println("\nEnter the number of classes attended for 75 days:");
 	      classAttended = sc.nextInt();
 	        
 	        percentage= (classAttended*100)/classHeld;
@@ -29,7 +29,7 @@ public class CollegeGrade {
 	        System.out.println("PERCENTAGE CALCULATION:");
 	        System.out.println("NUMBER OF CLASSES HELD     : "+classHeld);
 	        System.out.println("NUMBER OF CLASSES ATTENDED : "+classAttended);
-	        System.out.println("PERCENTAGE                 : "+ percentage);
+	        System.out.println("PERCENTAGE                 : "+ percentage+"%");
 	        System.out.println("\nNOTE:YOUR PERCENTAGE HAS TO BE ABOVE 75 TO TAKE UP THE SEMESTER EXAM");
 	        System.out.println("---------------------------------------------------------------------");
 	        }

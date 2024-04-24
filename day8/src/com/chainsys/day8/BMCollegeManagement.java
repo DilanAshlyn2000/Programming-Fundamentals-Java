@@ -12,9 +12,8 @@ public class BMCollegeManagement {
 	}
 	
 	public void setDepartmentB(String departmentB) {
-		String department1="COMPUTER SCIENCE";
-		String department3="computer science";
-		if ((departmentB.equals(department1)) || (departmentB.equals("ENGLISH")) || (departmentB.equals("TAMIL"))|| (departmentB.equals("ZOOLOGY")) || (departmentB.equals("MATHS"))|| (departmentB.equals(department3)) || (departmentB.equals("english")) || (departmentB.equals("tamil"))|| (departmentB.equals("zoology")) || (departmentB.equals("maths")))
+		
+		if ((departmentB.equals("BCA")) || (departmentB.equals("ENGLISH")) || (departmentB.equals("TAMIL"))|| (departmentB.equals("ZOOLOGY")) || (departmentB.equals("MATHS"))|| (departmentB.equals("bca")) || (departmentB.equals("english")) || (departmentB.equals("tamil"))|| (departmentB.equals("zoology")) || (departmentB.equals("maths")))
 		{
 			this.departmentB = departmentB;
 		} 
@@ -29,9 +28,8 @@ public class BMCollegeManagement {
 	}
 
 	public void setDepartmentM(String departmentM) {
-		String department2="COMPUTER SCIENCE";
-		String department4="computer science";
-		if((departmentM.equals(department2)) || (departmentM.equals("ENGLISH")) || (departmentM.equals("MATHS"))||(departmentM.equals(department4)) || (departmentM.equals("english")) || (departmentM.equals("maths")))
+		
+		if((departmentM.equals("TAMIL")) || (departmentM.equals("ENGLISH")) || (departmentM.equals("MATHS"))|| (departmentM.equals("english")) || (departmentM.equals("maths"))||(departmentM.equals("tamil")) )
 		{
 			this.departmentM = departmentM;
 		} 
@@ -47,7 +45,7 @@ public class BMCollegeManagement {
 	}
 
 	public void setId(int id) {
-		if (id > 0 && id <= 500) {
+		if (id > 0 && id <= 1000) {
 			this.id = id;
 		} else {
 			System.out.println("INVALID! GIVE PROPER ID");

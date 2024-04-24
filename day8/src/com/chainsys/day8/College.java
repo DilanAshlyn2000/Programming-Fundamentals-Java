@@ -10,13 +10,14 @@ public class College {
 	    float gradePercentage,attendance;
 	    BMCollegeManagement a=new BMCollegeManagement();
 		Scanner sc=new Scanner(System.in);
+		System.out.println("ADDING STUDENT");
 		System.out.println("ENTER THE STUDENT ID:");
 		id=sc.nextInt();
 		System.out.println("ENTER COURSE:(BACHELORS/MASTERS)");
 		course=sc.next();
 		switch(course.toUpperCase()) {
 		case "BACHELORS":
-			System.out.println("THE COURSES OFFERED IN UNDER GRADUATION ARE:\n*COMPUTER SCIENCE\n*ENGLISH\n*TAMIL\n*ZOOLOGY\n*MATHS");
+			System.out.println("THE COURSES OFFERED IN UNDER GRADUATION ARE:\n*BCA\n*ENGLISH\n*TAMIL\n*ZOOLOGY\n*MATHS");
 			System.out.println("ENTER THE DEPARTMENT:");
 			departmentB=sc.next();
 			a.setDepartmentB(departmentB);
@@ -25,7 +26,7 @@ public class College {
 			a.setYearB(yearB);
 			break;
 		case "MASTERS":
-			System.out.println("THE COURSES OFFERED IN POST GRADUATION ARE:\n*COMPUTER SCIENCE\n*ENGLISH\n*MATHS");
+			System.out.println("THE COURSES OFFERED IN POST GRADUATION ARE:\n*TAMIL\n*ENGLISH\n*MATHS");
 			System.out.println("ENTER THE DEPARTMENT:");
 			departmentM=sc.next();
 			a.setDepartmentM(departmentM);
@@ -51,9 +52,11 @@ public class College {
 		a.setNumberOfArrears(numberOfArrears);
 		a.setGradePercentage(gradePercentage);
 		a.setAttendance(attendance);
-	    System.out.println("\n             ABC COLLEGE");
-		System.out.println("    Bachelor's Degree Student Details");
+		System.out.println("\n***********************************************");
+	    System.out.println("            ABC COLLEGE");
 		System.out.println("***********************************************");
+		System.out.println("Student Details:");
+		System.out.println("----------------");
 		System.out.println("ID                   :"+a.getId());
 		if((course.equals("BACHELORS")) || (course.equals("Bachelors"))||(course.equals("bachelors"))){
 	    System.out.println("DEPARTMENT           :"+a.getDepartmentB());

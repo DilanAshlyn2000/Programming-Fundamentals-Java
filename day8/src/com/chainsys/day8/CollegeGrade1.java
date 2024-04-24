@@ -2,6 +2,7 @@ package com.chainsys.day8;
 
 public class CollegeGrade1 extends CollegeGrade {
 	public static void examEligibility(float attendance,float gradePercentage,int numberOfArrears) {
+	
 		System.out.println("\nELIGIBILITY FOR SEMESTER EXAM:\n 1) ATTENDANCE PERCENTAGE = 75 and above \n 2) GRADE PERCENTAGE = 50 and above \n 3) NO. OF ARREARS = NIL");
 		System.out.println("\nATTENDANCE PERCENTAGE: "+attendance);
 		System.out.println("GRADE PERCENTAGE     : "+gradePercentage);
