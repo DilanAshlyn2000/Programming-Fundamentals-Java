@@ -29,7 +29,6 @@ public class CollegeGrade {
 		{
 			System.out.println("INVALID INPUT");
 			examEligibility();
-	
 		}
 }
 	public static void percentageCalculation(int classHeld) {
@@ -51,5 +50,5 @@ public class CollegeGrade {
 	        	System.out.println("INVALID! ENTER CORRECT NUMBER OF CLASSES ATTENDED");
 	        	percentageCalculation(75);
 	        }
-	}
+	   }
 }

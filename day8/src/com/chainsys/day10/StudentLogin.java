@@ -3,7 +3,7 @@ package com.chainsys.day10;
 import java.util.Scanner;
 
 public class StudentLogin {
-public void Login() {
+public void login() {
 	
 	/*System.out.println("ENTER YOUR STUDENT ID:");
     int id = sc.nextInt();
@@ -22,50 +22,52 @@ switch(choice) {
 case '1':
 	HomePage e=new HomePage();
 	e.aboutCollege();
-	Login();
+	login();
 	break;
 	
 case '2':
 	Department i=new Department();
-	i.DepartmentDetails();
-	Login();
+	i.departmentDetails();
+	login();
 	break;
 case '3':
 	HomePage f=new HomePage();
 	f.facultyDetail();
-	Login();
+	login();
     break;  
 case '4':
     CollegeGrade b=new CollegeGrade();
     b.percentageCalculation(75);
-    Login();
+    login();
     break;
 case '5':
 	  CollegeGrade a=new CollegeGrade();
       a.examEligibility();
-      Login();
+      login();
       break;
 case '6':
       CollegeGrade1 c=new CollegeGrade1();
       c.examEligibility();
-      Login();
+      login();
       break;
 case '7':
       FeesCollege g=new FeesCollege();
       g.fee();
-      Login();
+      login();
       break;
 case '8':
 	Scholarship h=new Scholarship();
 	h.scholarshipCollege(4000, 2500);
-	Login();
+	login();
 	break;
 case '9':
 	System.out.println("THANK YOU");
+	AdminStudent s=new AdminStudent();
+	s.LoginCredentials();
 	break;
 default:
 	System.out.println("INVALID!");
-	Login();
+	login();
 	break;
   }
 

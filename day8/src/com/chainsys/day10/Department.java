@@ -1,7 +1,7 @@
 package com.chainsys.day10;
 
 public class Department {
-	public void DepartmentDetails() {
+	public void departmentDetails() {
 		System.out.println("|==================================|");
 		System.out.println("|           ABC COLLEGE            |");
 		System.out.println("|==================================|");
