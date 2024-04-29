@@ -33,12 +33,10 @@ public class College {
 			System.out.println("ENTER THE YEAR:(1/2)");
 			yearM=sc.nextInt();
 			a.setYearM(yearM);
-			
 		    break;
 		default:
-			System.out.println("INVALID!");
+			System.out.println("INVALID");
 			return;
-		
 		}
 		System.out.println("ENTER THE NUMBER OF ARREARS:");
 		numberOfArrears=sc.nextInt();
@@ -46,8 +44,6 @@ public class College {
 		gradePercentage=sc.nextFloat();
 		System.out.println("ENTER THE ATTENDANCE PERCENTAGE:");
 	    attendance=sc.nextFloat();
-	
-	
 	    a.setId(id);
 		a.setNumberOfArrears(numberOfArrears);
 		a.setGradePercentage(gradePercentage);

@@ -9,7 +9,7 @@ public class NewUserLogin {
 
 	public void newUser() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("             REGISTRATION FORM");
+		System.out.println(" REGISTRATION FORM");
 		System.out.println("ENTER YOUR STUDENT ID: ");
 		int id = sc.nextInt();
 		System.out.println("ENTER COURSE:(BACHELORS/MASTERS)");
@@ -26,7 +26,7 @@ public class NewUserLogin {
 			departmentM = sc.next();
 			break;
 		default:
-			System.out.println("INVALID!");
+			System.out.println("INVALID! ");
 			newUser();
 			return;
 		}
@@ -52,8 +52,8 @@ public class NewUserLogin {
 				System.out.println("|  REGISTRACTION SUCCESSFUL    |");
 				System.out.println("|______________________________|");
 
-				AdminStudent a = new AdminStudent();
-				a.LoginCredentials();
+				LoginPage log = new LoginPage();
+				log.LoginCredentials();
 
 			} else {
 				System.out.println("INVALID");

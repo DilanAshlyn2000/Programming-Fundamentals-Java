@@ -72,7 +72,7 @@ public class BMCollegeManagement {
 		if (yearM > 0 && yearM <= 2) {
 			this.yearM = yearM;
 		} else {
-			System.out.println("INVALID! GIVE PROPER YEAR");
+			System.out.println("INVALID, GIVE PROPER YEAR");
 		}
 	}
 

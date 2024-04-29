@@ -6,7 +6,7 @@ public class StudentListAdmin {
 	public void studentList() {
 	Scanner sc = new Scanner(System.in);
 	System.out.println("DEGREE:\n 1.BACHELORS\n 2.MASTERS\n 3.EXIT");
-	System.out.println("ENTER YOUR CHOICE:");
+	System.out.println("ENTER YOUR CHOICE: ");
 	char degree = sc.next().charAt(0);
 	if ((degree == '1') || (degree == '2')||(degree=='3')) {
 		switch (degree) {
@@ -64,7 +64,7 @@ public class StudentListAdmin {
 			}
 			break;
 		case'3':
-			AdminStudent a=new AdminStudent();
+			LoginPage a=new LoginPage();
 			a.LoginCredentials();
 			break;
 		case '2':

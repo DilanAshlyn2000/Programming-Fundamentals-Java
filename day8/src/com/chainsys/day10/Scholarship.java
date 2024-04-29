@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Scholarship {
 	public void scholarshipCollege(int scholarship1, int scholarship2) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("SCHOLARSHIP");
+		System.out.println("SCHOLARSHIP ");
 		System.out.println("-----------");
 		char firstGraduate;
 		System.out.println("ARE YOU A FIRST GRADUATE:(Y/N)");

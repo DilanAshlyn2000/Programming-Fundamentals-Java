@@ -11,21 +11,21 @@ public class AdminLogin {
 	char choice=sc.next().charAt(0);
 	switch(choice) {
 	case '1':
-		College d=new College();
-	    d.userInput();
+		College add=new College();
+	    add.userInput();
 	    adminLogin();
 		break;
 	case '2':
-		StudentListAdmin a=new StudentListAdmin();
-		a.studentList();
+		StudentListAdmin view=new StudentListAdmin();
+		view.studentList();
 		adminLogin();
 		break;
 	case '3':
-		AdminStudent b=new AdminStudent();
-		b.LoginCredentials();
+		LoginPage exit=new LoginPage();
+		exit.LoginCredentials();
 		break;
 	default:
-		System.out.println("INVALID!");
+		System.out.println("INVALID");
 		adminLogin();
 		break;
 	 }

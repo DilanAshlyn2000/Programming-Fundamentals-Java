@@ -15,12 +15,10 @@ public class TestCollegeManagement {
 		System.out.println("|_____________________________________________|");
 		
 		
-		AdminStudent b=new AdminStudent();
-		b.LoginCredentials();
+		LoginPage login=new LoginPage();
+		login.LoginCredentials();
 			
-      //StudentListAdmin a=new StudentListAdmin();
-      //a.StudentList();
-   
+     
 	}
         }
         

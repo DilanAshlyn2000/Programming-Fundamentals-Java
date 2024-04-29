@@ -29,7 +29,7 @@ public class CollegeGrade1 extends CollegeGrade {
 		}
 		else
 		{
-		System.out.println("INVALID INPUT!");	
+		System.out.println("INVALID INPUT");	
 		examEligibility();
 		}
 		

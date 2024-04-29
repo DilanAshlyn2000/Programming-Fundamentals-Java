@@ -23,7 +23,7 @@ public class HomePage {
 			System.out.println(
 					"        To act as a bridge between the academic and the social ambit outside of it for moral, intellectual and cultural advancement of society, thereby effortlessly combining traditional values and modern aesthetics with integrity and passion.");
 			System.out.println(
-					"*********************************************************************************************");
+					"********************************************************************************************");
 			break;
 		case '2':
 			System.out.println("\nCOLLEGE PROFILE:");
