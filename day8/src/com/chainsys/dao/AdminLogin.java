@@ -18,7 +18,9 @@ public class AdminLogin {
 		break;
 	case '2':
 		StudentListAdmin view=new StudentListAdmin();
-		view.studentList();
+		RegistrationSql display=new RegistrationSql();
+		display.show();
+		//view.studentList();
 		adminLogin();
 		break;
 	case '3':
