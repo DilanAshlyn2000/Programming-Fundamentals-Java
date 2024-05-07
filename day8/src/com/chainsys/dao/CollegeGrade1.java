@@ -1,5 +1,6 @@
 package com.chainsys.dao;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CollegeGrade1 extends CollegeGrade {
@@ -8,6 +9,7 @@ public class CollegeGrade1 extends CollegeGrade {
 		int numberOfArrears;
 		Scanner sc=new Scanner(System.in);
 		System.out.println("ENTER YOUR ATTENDANCE PERCENTAGE:");
+		try{
 		attendance=sc.nextFloat();
 		System.out.println("ENTER YOUR EXAM PERCENTAGE:");
 		gradePercentage=sc.nextFloat();
@@ -31,8 +33,12 @@ public class CollegeGrade1 extends CollegeGrade {
 		{
 		System.out.println("INVALID INPUT");	
 		examEligibility();
-		}
 		
+		}
+	}
+		catch(InputMismatchException  e) {
+			System.out.println("InputMismatchException");
+		}
     System.out.println("---------------------------------------------------------------------");
 }
 }

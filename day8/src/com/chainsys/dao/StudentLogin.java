@@ -3,7 +3,9 @@ package com.chainsys.dao;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class StudentLogin {
+import com.chainsys.model.BMCollegeManagement;
+
+public class StudentLogin extends BMCollegeManagement{
 public void login() throws ClassNotFoundException, SQLException {
 Scanner sc=new Scanner(System.in); 
 System.out.println("ENTER YOUR CHOICE:");
@@ -58,6 +60,9 @@ case "9":
 	FeedBack1 form=new FeedBack1();
 	form.collegeFeedBack();
 	form.collegeSuggestion();
+	RegistrationSql1 feed=new RegistrationSql1();
+//	feed.feedbackInsert(id,feedback);
+	feed.feedbackInsert(id, feedback);
 	login();
 	break;
 case "10":

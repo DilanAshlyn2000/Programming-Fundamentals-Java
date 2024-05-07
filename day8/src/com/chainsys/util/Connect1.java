@@ -13,7 +13,7 @@ public class Connect1 {
 	}
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/StudentLogin","root","Welcome#22");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/collegedetails","root","Welcome#22");
         return connection;
 }
 

@@ -1,5 +1,6 @@
 package com.chainsys.dao;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CollegeGrade {
@@ -17,7 +18,7 @@ public class CollegeGrade {
 		System.out.println("\nATTENDANCE PERCENTAGE: "+attendance);
 		System.out.println("GRADE PERCENTAGE     : "+gradePercentage);
 		if((attendance>75&&attendance<100)&&(gradePercentage>50 && gradePercentage<=100)) {
-			
+
 			System.out.println("RESULT:ELIGIBLE TO TAKE UP THE EXAM");
 		}
 		else {
@@ -35,9 +36,9 @@ public class CollegeGrade {
 		int percentage,classAttended;
 		Scanner sc=new Scanner(System.in);
 		 System.out.println("\nENTER THE NUMBER OF CLASSES ATTENDED FOR 75 days:");
-	      classAttended = sc.nextInt();
-	        
-	        percentage= (classAttended*100)/classHeld;
+	      try {
+		 classAttended = sc.nextInt();
+		 percentage= (classAttended*100)/classHeld;
 	        if(classHeld>classAttended) {
 	        System.out.println("PERCENTAGE CALCULATION:");
 	        System.out.println("NUMBER OF CLASSES HELD     : "+classHeld);
@@ -45,10 +46,14 @@ public class CollegeGrade {
 	        System.out.println("PERCENTAGE                 : "+ percentage+"%");
 	        System.out.println("\nNOTE:YOUR PERCENTAGE HAS TO BE ABOVE 75 TO TAKE UP THE SEMESTER EXAM");
 	        System.out.println("---------------------------------------------------------------------");
-	        }
-	        else {
+	        } else {
 	        	System.out.println("INVALID! ENTER CORRECT NUMBER OF CLASSES ATTENDED");
 	        	percentageCalculation(75);
 	        }
+	      }
+	      catch(InputMismatchException e) {
+	    	  System.out.println("InputMismatchException: CLASS ATTENDED SHOULD BE LESS THAN 75");
+	      }
+	      
 	   }
 }
