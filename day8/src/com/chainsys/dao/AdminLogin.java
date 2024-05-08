@@ -8,7 +8,7 @@ public class AdminLogin {
 	Scanner sc =new Scanner(System.in);
 	System.out.println("ENTER YOUR CHOICE:");
 	System.out.println("------------------");
-	System.out.println("1. ADD STUDENT\n2. VIEW STUDENT DETAILS\n3. EXIT");
+	System.out.println("1. ADD STUDENT\n2. VIEW STUDENT DETAILS\n3. UPDATE FEES PAID/UNPAID\n4. UPDATE INTERNAL MARKS\n5. EXIT");
 	char choice=sc.next().charAt(0);
 	switch(choice) {
 	case '1':
@@ -24,6 +24,16 @@ public class AdminLogin {
 		adminLogin();
 		break;
 	case '3':
+		FeesCollege fee=new FeesCollege();
+		fee.feesPaid();
+		adminLogin();
+		break;
+	case '4':
+		College mark=new College();
+		mark.internalMarks();
+		adminLogin();
+		break;
+	case '5':
 		LoginPage exit=new LoginPage();
 		exit.LoginCredentials();
 		break;

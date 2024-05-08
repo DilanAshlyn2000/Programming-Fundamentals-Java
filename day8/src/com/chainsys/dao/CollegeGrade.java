@@ -1,24 +1,28 @@
 package com.chainsys.dao;
 
+import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CollegeGrade {
 
-	public static void examEligibility() {
-		float attendance, gradePercentage;
+	public static void examEligibility(){
+		float attendance;
+		String feeDetails;
+		int id;
 		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER THE ID:");
+		id=sc.nextInt();
 		System.out.println("ENTER YOUR ATTENDANCE PERCENTAGE:");
 		attendance=sc.nextFloat();
-		System.out.println("ENTER YOUR EXAM PERCENTAGE:");
-		gradePercentage=sc.nextFloat();
-		if((attendance>0 && attendance<=100)&&(gradePercentage>0 && gradePercentage<=100))
+		System.out.println("ENTER IF THE FEES IS PAID OR UNPAID:");
+		feeDetails=sc.next();
+		if((attendance>0 && attendance<=100)&&(feeDetails.equals("PAID"))||(feeDetails.equals("UNPAID")))
 		{
-				System.out.println("\nELIGIBILITY FOR CIA EXAM:\n 1) ATTENDANCE PERCENTAGE = 75 and above \n 2) GRADE PERCENTAGE = 50 and above ");
+		System.out.println("\nELIGIBILITY FOR CIA EXAM:\n 1) ATTENDANCE PERCENTAGE = 75 and above \n 2) FEES SHOULD BE PAID ");
 		System.out.println("\nATTENDANCE PERCENTAGE: "+attendance);
-		System.out.println("GRADE PERCENTAGE     : "+gradePercentage);
-		if((attendance>75&&attendance<100)&&(gradePercentage>50 && gradePercentage<=100)) {
-
+		System.out.println("FEES UPDATE            : "+feeDetails);
+		if((attendance>75&&attendance<100)&&(feeDetails.equals("PAID"))) {
 			System.out.println("RESULT:ELIGIBLE TO TAKE UP THE EXAM");
 		}
 		else {

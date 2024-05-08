@@ -1,18 +1,22 @@
 package com.chainsys.dao;
 
+import java.sql.SQLException;
 import java.util.Scanner;
+
+import com.chainsys.model.BMCollegeManagement;
 
 public class FeesCollege {
 public void fee() {
-	System.out.println("COLLEGE FEES:\n 1.BACHELORS\n 2.MASTERS");
+	System.out.println("COLLEGE FEES");
+	// \n 1.BACHELORS\n 2.MASTERS");
 	Scanner sc=new Scanner(System.in);
-	System.out.println("ENTER YOUR CHOICE:");
-	char fee = sc.next().charAt(0);
+	//System.out.println("ENTER YOUR CHOICE:");
+	//char fee = sc.next().charAt(0);
 	int hFee,totalFee;
 	String hostelFee;
 	
-	switch(fee) {
-	case '1':
+	//switch(fee) {
+	//case '1':
 		System.out.println("ENTER THE DEPARTMENT:\n1.BCA\n2.ENGLISH\n3.TAMIL\n4.ZOOLOGY\n5.MATHS");
 		System.out.println("ENTER YOUR CHOICE:");
 		char feeB=sc.next().charAt(0);
@@ -145,8 +149,9 @@ public void fee() {
 			System.out.println("INVALID!GIVE PROPER INPUT");
 			fee();
 			break;
-		}break;
-	case '2':
+		}
+		//break;
+	/*case '2':
 		System.out.println("ENTER THE DEPARTMENT:\n1.TAMIL\n2.ENGLISH\n3.MATHS");
 		System.out.println("ENTER YOUR CHOICE:");
 		char feeM=sc.next().charAt(0);
@@ -228,9 +233,35 @@ public void fee() {
 			System.out.println("INVALID!GIVE PROPER INPUT");
 			fee();
 			break;
+			}
+}*/
 }
-}
-	System.out.println("********************************************************************************************");
-
-}
+public void feesPaid() throws ClassNotFoundException, SQLException {
+	BMCollegeManagement a=new BMCollegeManagement();
+	Scanner sc=new Scanner(System.in);
+	System.out.println("ENTER THE STUDENT'S ID:");
+	int id=sc.nextInt();
+	a.setId(id);
+	System.out.println("ENTER IF THE FEES IS PAID OR UNPAID");
+	String feesPaid=sc.next();
+	a.setFeesPaid(feesPaid);
+	if(feesPaid.equals("PAID") || feesPaid.equals("UNPAID"))
+	{
+		RegistrationSql1.feesInsert(id, feesPaid);
+		System.out.println("UPDATED!");
+	}
+	else
+	{
+		try
+		{
+	        throw new MyException();
+	    }
+	    catch (MyException ex) 
+		{
+	    //	System.out.println("Input should be either PAID or UNPAID.");
+	   // System.out.println(ex.getMessage());
+	    	  ex.getMessage();
+	    }
+	}		
+  }
 }

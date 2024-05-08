@@ -7,19 +7,17 @@ import java.util.Scanner;
 import com.chainsys.model.BMCollegeManagement;
 
 public class College {
-
+	BMCollegeManagement a=new BMCollegeManagement();
 	public void userInput() throws ClassNotFoundException, SQLException {
-		String departmentB,course;
-		//String departmentM;
+		String departmentB;
+		//String departmentM,course;
 	    int id,yearB,numberOfArrears;
 	    //int yearM;
 	    float gradePercentage,attendance;
-	    BMCollegeManagement a=new BMCollegeManagement();
+	    //BMCollegeManagement a=new BMCollegeManagement();
 		Scanner sc=new Scanner(System.in);
 		System.out.println("ADDING STUDENT");
-
 		System.out.println("ENTER THE STUDENT ID:");
-		
 		id=sc.nextInt();
 		
 		/*System.out.println("ENTER COURSE:(BACHELORS/MASTERS)");
@@ -79,6 +77,18 @@ public class College {
 	    System.out.println("          STUDENT DETAILS UPDATED");
 
 	}
+	public void internalMarks() throws ClassNotFoundException, SQLException {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER THE STUDENT'S ID:");
+		int id=sc.nextInt();
+	    a.setId(id);
+		System.out.println("ENTER THE INTERNAL MARK PERCENTAGE:");
+		float internalMark=sc.nextFloat();
+		a.setInternalMark(internalMark);
+		RegistrationSql1.internalMarkInsert(id, internalMark);
+		System.out.println("***********************************************");
+		System.out.println("               MARKS UPDATED!");
+		}
 	}
 
 

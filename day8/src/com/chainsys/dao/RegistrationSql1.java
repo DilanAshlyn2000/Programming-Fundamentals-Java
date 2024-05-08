@@ -17,14 +17,11 @@ public class RegistrationSql1 {
 	
 	public  boolean loginUser(int userId, String password) throws ClassNotFoundException, SQLException {
         Connection connection =  Connect1.getConnection();
-
         String loginQuery = "SELECT stu_id,password FROM studentdetails WHERE stu_id = ? && password = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(loginQuery);
         preparedStatement.setInt(1, userId);
         preparedStatement.setString(2, password);
-
         ResultSet resultSet = preparedStatement.executeQuery();
-
         if (resultSet.next()) {
             return true;
         } else {
@@ -34,8 +31,7 @@ public class RegistrationSql1 {
      }
 	public static int insertUser(int id, String name,String password) throws ClassNotFoundException, SQLException {
         Connection connection =  Connect1.getConnection();
-
-        String insertQuery = "insert into studentdetails values(?,?,?,?,?,?,?,?);";
+        String insertQuery = "insert into studentdetails values(?,?,?,?,?,?,?,?,?,?,?);";
         PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
         preparedStatement.setInt(1, id);
         preparedStatement.setString(2,name);
@@ -45,6 +41,9 @@ public class RegistrationSql1 {
         preparedStatement.setFloat(6,0);
         preparedStatement.setInt(7,0);
         preparedStatement.setString(8,password);
+        preparedStatement.setString(9, null);
+        preparedStatement.setString(10, null);
+        preparedStatement.setFloat(11,0);
         int executeUpdate = preparedStatement.executeUpdate();
         System.out.println(executeUpdate);
         return id;
@@ -84,11 +83,21 @@ public class RegistrationSql1 {
         preparedStatement.setString(1,feedback);
         int executeUpdate = preparedStatement.executeUpdate();
 	}
-/*	public static void delete()throws ClassNotFoundException,SQLException {
-		 Connection connection =  Connect1.getConnection();
-		 String deleteQuery="DELETE FROM studentdetails where id=1";
-		 PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery);
-		 int rows=preparedStatement.executeUpdate();
-		 System.out.println(rows + "DELETED");
-}*/
+	
+	public static void feesInsert(int id,String feesPaid) throws ClassNotFoundException, SQLException {
+		Connection connection =  Connect1.getConnection();
+		String feedback1="update studentdetails set feesDetails=? where stu_id="+id;
+		PreparedStatement preparedStatement = connection.prepareStatement(feedback1);
+        preparedStatement.setString(1,feesPaid);
+        int executeUpdate = preparedStatement.executeUpdate();
+	}
+	public static void internalMarkInsert(int id,float internalMark) throws ClassNotFoundException, SQLException {
+		Connection connection =  Connect1.getConnection();
+		String marksupdate="update studentdetails set CIA=? where stu_id="+id;
+		PreparedStatement preparedStatement = connection.prepareStatement(marksupdate);
+        preparedStatement.setFloat(1,internalMark);
+        int executeUpdate = preparedStatement.executeUpdate();
+	}
+	
 }
+

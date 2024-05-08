@@ -5,11 +5,13 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.chainsys.model.BMCollegeManagement;
+
 //import com.chainsys.day10.LoginSql;
 //AdminStudent
-public class LoginPage extends LoginSql {
+public class LoginPage {
 	private int id;
-
+	BMCollegeManagement a=new BMCollegeManagement();
 	public void LoginCredentials() throws ClassNotFoundException, SQLException {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("LOGIN: \n1.ADMIN\n2.STUDENT");
@@ -30,19 +32,20 @@ public class LoginPage extends LoginSql {
 				System.out.println("Incorrect Username/Password.Please try again.");
 				//College d = new College();
 				LoginCredentials();
-				
 			}
 			break;
 		}
 		case '2': {
-			System.out.println("\n1.LOG IN\n2.SIGN UP");
+			System.out.println("\n1.SIGN IN\n2.SIGN UP");
 			char choice = sc.next().charAt(0);
 			RegistrationSql sql = new RegistrationSql();
 			if (choice == '1') {
 				System.out.println("Enter your ID");
 				int id = sc.nextInt();
+				a.setId(id);
 				System.out.println("Enter your password");
 				String password = sc.next();
+				a.getPassword();
 				if (sql.loginUser(id, password)) {
 					StudentLogin s = new StudentLogin();
 					s.login();
@@ -70,8 +73,10 @@ public class LoginPage extends LoginSql {
 			} else if (choice == '2') {
 				System.out.println("Enter your ID");
 				int id = sc.nextInt();
+				a.setId(id);
 				System.out.println("Enter your name");
 				String name = sc.next();
+				a.getName();
 				System.out.println("Enter your password");
 				String password = sc.next();
 				
@@ -82,12 +87,9 @@ public class LoginPage extends LoginSql {
 				boolean valid = matchers.matches();
 
 				if (valid) {
-				
-				
 				//System.out.println("Enter your name");
 				//String name = sc.next();
-				 sql.registerUser(id, name, password);
-				
+				 RegistrationSql1.registerUser(id, name, password);
 			}else {
 				System.out.println("INVALID PASSWORD! IT SHOULD CONTAIN ATLEAST ONE UPPERCASE,LOWERCASE,A DIGIT AND A SPECIAL CHARACTER.");
 			}

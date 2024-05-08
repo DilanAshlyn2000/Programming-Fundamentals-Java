@@ -1,14 +1,20 @@
 package com.chainsys.dao;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
-public class FeedBack1 implements FeedBack{
+public class FeedBack1 implements FeedBack {
 @Override
-public void collegeFeedBack() {
+public void collegeFeedBack() throws ClassNotFoundException, SQLException {
+	
 Scanner sc=new Scanner(System.in);
 System.out.println("FEEDBACK FORM\n-------------");
+System.out.println("ENTER YOUR ID:");
+int id=sc.nextInt();
 System.out.println("ENTER YOUR FEEDBACK ABOUT OUR COLLEGE:");
-String feedback=sc.nextLine();
+String feedback=sc.next();
+RegistrationSql1.feedbackInsert(id, feedback);
+//RegistrationSql1.feedbackInsert(id,feedback);
 System.out.println("___________________\n| FEEDBACK SAVED! |\n|_________________|");	
 }
 
