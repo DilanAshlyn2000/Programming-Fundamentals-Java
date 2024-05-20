@@ -11,7 +11,6 @@ Scanner sc=new Scanner(System.in);
 System.out.println("ENTER YOUR CHOICE:");
 System.out.println("------------------");
 System.out.println("1.COLLEGE DETAILS(1.Vision,Mission & Motto  2.College Profile  3.Honours Conferred & Awards Received)\n2.DEPARTMENTS\n3.FACULTY\n4.PERCENTAGE CALCULATION\n5.EXAM ELIGIBILITY FOR CIA\n6.EXAM ELIGIBILITY FOR SEMESTER\n7.COLLEGE FEES\n8.SCHOLARSHIP\n9.FEEDBACK AND SUGGESTION FORM\n10.EXIT ");
-
 String choice=sc.next();
 switch(choice) {
 case "1":

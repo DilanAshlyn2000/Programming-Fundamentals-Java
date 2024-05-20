@@ -8,7 +8,7 @@ public class AdminLogin {
 	Scanner sc =new Scanner(System.in);
 	System.out.println("ENTER YOUR CHOICE:");
 	System.out.println("------------------");
-	System.out.println("1. ADD STUDENT\n2. VIEW STUDENT DETAILS\n3. UPDATE FEES PAID/UNPAID\n4. UPDATE INTERNAL MARKS\n5. EXIT");
+	System.out.println("1. ADD SEMESTER RESULTS \n2. VIEW STUDENT DETAILS\n3. UPDATE FEES PAID/UNPAID\n4. UPDATE INTERNAL MARKS\n5. DELETE A STUDENT \n6. ADD FACULTY \n7. DELETE FACULTY \n8.EXIT");
 	char choice=sc.next().charAt(0);
 	switch(choice) {
 	case '1':
@@ -34,9 +34,23 @@ public class AdminLogin {
 		adminLogin();
 		break;
 	case '5':
+		RegistrationSql1 delete=new RegistrationSql1();
+		delete.deleteStudent(0);
+		break;
+	case '8':
 		LoginPage exit=new LoginPage();
 		exit.LoginCredentials();
 		break;
+	case '6':
+		
+		College insert=new College();
+		insert.facultyDetails();
+		break;
+	case '7':
+		RegistrationSql1 delete1=new RegistrationSql1();
+		delete1.deleteFaculty(0);
+		break;
+	case '9':
 	default:
 		System.out.println("INVALID");
 		adminLogin();

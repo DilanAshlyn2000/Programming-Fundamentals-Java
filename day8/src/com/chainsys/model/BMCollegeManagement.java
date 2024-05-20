@@ -2,16 +2,53 @@ package com.chainsys.model;
 
 public class BMCollegeManagement {
 
-	String departmentB,departmentM;
-    int id,yearB,yearM,numberOfArrears;
-    float gradePercentage,attendance;
+	String name,departmentB,feesPaid;
+	//departmentM;
+    public int id;
+	int yearB;
+	int numberOfArrears;
+    //yearM
+    float gradePercentage,attendance,internalMark;
     String password;
-    
-	public String getPassword() {
-		return password;
+	public String feedback;
+ int facultyId;
+String facultyName;
+ String facultyDepartment;
+ String qualification;
+ 
+ public int getFacultyId() {
+		return facultyId;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setFacultyId(int facultyId) {
+		this.facultyId = facultyId;
+	}
+	public String getFacultyName() {
+		return facultyName;
+	}
+	public void setFacultyName(String facultyName) {
+		this.facultyName = facultyName;
+	}
+	public String getFacultyDepartment() {
+		return facultyDepartment;
+	}
+	public void setFacultyDepartment(String facultyDepartment) {
+		this.facultyDepartment = facultyDepartment;
+	}
+	public String getQualification() {
+		return qualification;
+	}
+	public void setQualification(String qualification) {
+		this.qualification = qualification;
+	}
+	
+ 
+	public BMCollegeManagement(int facultyId, String facultyName, String facultyDepartment, String reasearch,
+			String qualification) {
+		this.facultyId = facultyId;
+		this.facultyName = facultyName;
+		this.facultyDepartment = facultyDepartment;
+		
+		this.qualification = qualification;
 	}
 	public String getDepartmentB() {
 		return departmentB;
@@ -31,7 +68,7 @@ public class BMCollegeManagement {
 		}
 	}
 
-	public String getDepartmentM() {
+	/*public String getDepartmentM() {
 		return departmentM;
 	}
 
@@ -46,7 +83,7 @@ public class BMCollegeManagement {
 			System.out.println("INVALID! GIVE PROPER DEPARTMENT NAME");
 		}
 	
-	}
+	}*/
 
 	public int getId() {
 		return id;
@@ -72,7 +109,7 @@ public class BMCollegeManagement {
 		}
 	}
 
-	public int getYearM() {
+/*	public int getYearM() {
 		return yearM;
 	}
 
@@ -82,7 +119,7 @@ public class BMCollegeManagement {
 		} else {
 			System.out.println("INVALID, GIVE PROPER YEAR");
 		}
-	}
+	}*/
 
 	public int getNumberOfArrears() {
 		return numberOfArrears;
@@ -119,28 +156,67 @@ public class BMCollegeManagement {
 			System.out.println("INVALID!, GIVE PROPER ATTENDANCE PERCENTAGE");
 		}
 	}
+	  
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public String getPassword() {
+			return password;
+		}
+		public void setPassword(String password) {
+			this.password = password;
+		}
 
+	public String getFeedback() {
+			return feedback;
+		}
+		public void setFeedback(String feedback) {
+			this.feedback = feedback;
+		}
+		
+	public String getFeesPaid() {
+			return feesPaid;
+		}
+		public void setFeesPaid(String feesPaid) {
+			this.feesPaid = feesPaid;
+		}
+		
+	public float getInternalMark() {
+			return internalMark;
+		}
+		public void setInternalMark(float internalMark) {
+			this.internalMark = internalMark;
+		}
+	public BMCollegeManagement(int facultyId, String facultyName, String facultyDepartment, String qualification) {
+			super();
+			this.facultyId = facultyId;
+			this.facultyName = facultyName;
+			this.facultyDepartment = facultyDepartment;
+			this.qualification = qualification;
+		}
 	public BMCollegeManagement(String departmentB, String departmentM, int id, int yearB, int yearM,
-			int numberOfArrears, float gradePercentage, float attendance) {
-	
+			int numberOfArrears, float gradePercentage, float attendance,float internalMark) {
 		this.departmentB = departmentB;
-		this.departmentM = departmentM;
+		//this.departmentM = departmentM;
 		this.id = id;
 		this.yearB = yearB;
-		this.yearM = yearM;
+		//this.yearM = yearM;
 		this.numberOfArrears = numberOfArrears;
 		this.gradePercentage = gradePercentage;
 		this.attendance = attendance;
+		this.internalMark=internalMark;
 	}
-	public BMCollegeManagement(int id, String password) {
-		
+	public BMCollegeManagement(int id,String name,String password) {	
 		this.id = id;
+		this.name = name;
 		this.password = password;
 	}
-	
-	public String toString() {
-		return "BMCollegeManagement [id=" + id + ", password=" + password + "]";
+	public BMCollegeManagement(int id, String feedback) {
+		this.id = id;
+		this.feedback = feedback;
 	}
-    
 	}
 

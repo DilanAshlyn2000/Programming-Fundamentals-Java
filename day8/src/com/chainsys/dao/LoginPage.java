@@ -38,7 +38,7 @@ public class LoginPage {
 		case '2': {
 			System.out.println("\n1.SIGN IN\n2.SIGN UP");
 			char choice = sc.next().charAt(0);
-			RegistrationSql sql = new RegistrationSql();
+			RegistrationSql1 sql = new RegistrationSql1();
 			if (choice == '1') {
 				System.out.println("Enter your ID");
 				int id = sc.nextInt();
